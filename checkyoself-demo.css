@@ -1,0 +1,22 @@
+#nav {
+	margin-bottom:0;
+	background-color:#59A315;
+	border-color:#59A315;
+	border-radius:0;
+}
+#nav a p.navbar-text{
+	color:#fff;
+}
+#top {
+	color:#86C70E;
+}
+#top h1 small {
+	color:#59A315;
+}
+#demo {
+	text-align:center;
+}
+label {
+	font-size:3em;
+	color:#333;
+}
