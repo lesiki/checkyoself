@@ -3,7 +3,7 @@ var Checkyoself = function() {
 	morphers;
 	init = function() {
 		morphers = {};
-		$.each($('input[type=checkbox][data-checkyo]'), function(index, el) {
+		$.each($('input[data-checkyo]'), function(index, el) {
 			var myIcons;
 			prependSvg(el, index);
 			$(this).attr('style', 'display:none;');
@@ -25,11 +25,15 @@ var Checkyoself = function() {
 		$(selector).before(svg);
 	},
 	bindCheckboxListener = function() {
-		$('input[type=checkbox][data-checkyo]').change(function() {
-			var idPrefix = $(this).prev().attr('data-idprefix');
+		$('input[data-checkyo]').change(function() {
+			var idPrefix = $(this).prev().attr('data-idprefix'),
+			state;
 			morphers[idPrefix].to(getIconIdToDisplay($(this), idPrefix));
 			if($(this).is(':checked')) {
 				$('svg[data-idprefix=' + idPrefix + ']').attr('class', 'check');
+				if($(this).is('input[type=radio]')) {
+					$('input[data-checkyo][type=radio][name=' + $(this).attr('name') + ']').not(':checked').change();
+				}
 			}
 			else {
 				$('svg[data-idprefix=' + idPrefix + ']').attr('class', 'cross');
