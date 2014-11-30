@@ -8,7 +8,7 @@ var Checkyoself = function() {
 			prependSvg(el, index);
 			$(this).attr('style', 'display:none;');
 			myIcons = new SVGMorpheus('#checkyoself-wrap-' + index);
-			myIcons.to(getIconIdToDisplay($(this), index));
+			myIcons.to(getIconIdToDisplay($(this), index), {duration:200, easing:'expo-in', rotation:'none'});
 			morphers[index] = myIcons;
 		});
 		bindCheckboxListener();
@@ -28,7 +28,7 @@ var Checkyoself = function() {
 		$('input[data-checkyo]').change(function() {
 			var idPrefix = $(this).prev().attr('data-idprefix'),
 			state;
-			morphers[idPrefix].to(getIconIdToDisplay($(this), idPrefix));
+			morphers[idPrefix].to(getIconIdToDisplay($(this), idPrefix), {duration:200, easing:'expo-in', rotation:'none'});
 			if($(this).is(':checked')) {
 				$('svg[data-idprefix=' + idPrefix + ']').attr('class', 'check');
 				if($(this).is('input[type=radio]')) {
