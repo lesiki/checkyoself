@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>checkyoself : animated checkbox alternative</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="svg-morpheus.js"></script>
+	<script type="text/javascript" src="checkyoself.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/lang-basic.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
+	<link rel="stylesheet" href="checkyoself.css" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation" id="nav">
+		<div class="container-fluid">
+			<div class="navbar-header">
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="page-header" id="top">
+					<h1>checkyoself <small>fun checkboxes with svg</small></h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12" id="demo">
+				<label><input type="checkbox" data-checkyo>Click me, yo!</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h2>About</h2>
+				<p class="lead">Depends on <a href="https://github.com/alexk111/SVG-Morpheus">SVG-Morpheus</a> and JQuery</p>
+				<p class="lead">The SVGs used are from font-awesome, split out by <a href="https://github.com/encharm/Font-Awesome-SVG-PNG">encharm</a> </p>
+			</div>
+			<div class="col-md-6">
+				<h2>Usage</h2>
+				<p class="lead">Simply include in page, along with dependencies, and give your checkboxes <em>data-checkyo</em> data attributes</p>
+				<pre class="prettyprint">&lt;label&gt;&lt;input type=&quot;checkbox&quot; data-checkyo&gt;Click me, yo!&lt;/label&gt;</pre>
+				<p class="lead">As the example above shows, you also need to embed the checkbox input inside the associated label tag, which has the desirable side-effect of making labels clickable.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

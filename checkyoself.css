@@ -1,0 +1,32 @@
+svg {
+	transition:fill 1s ease;
+}
+.cross {
+	fill:#888;
+}
+.check {
+	fill:#5cb85c;
+}
+#nav {
+	margin-bottom:0;
+	background-color:#59A315;
+	border-color:#59A315;
+	border-radius:0;
+}
+#top {
+	color:#86C70E;
+}
+#top h1 small {
+	color:#59A315;
+}
+#demo {
+	text-align:center;
+}
+label {
+	font-size:3em;
+}
+label svg {
+	vertical-align:baseline;
+	height:1.2em;
+	padding-top:0.35em;
+}
